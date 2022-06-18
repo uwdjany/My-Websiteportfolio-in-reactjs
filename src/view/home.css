@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #333;
+}
+.home-content{
+    background-image: url("../assets/image/djany.png");
+    width: 80%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    margin: 8rem;
+   
+}
