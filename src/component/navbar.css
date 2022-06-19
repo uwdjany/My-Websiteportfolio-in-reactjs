@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+    scroll-snap-type: y mandatory;
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
-.nav{
+/* .nav{
     display: flex;
     float: right;
     margin-right: 2rem;
@@ -33,4 +36,153 @@ html{
     
 
 
+} */
+body{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center; 
+    
+ background-color: aqua;
+ overflow: hidden;
+    min-height: 100vh;
+
 }
+::-webkit-scrollbar{
+    width: 0;
+}
+.open-menu{
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(8, 194, 194,0.938);
+    top: 3%;
+    right: 3%;
+    border-radius: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:12 ;
+    cursor: pointer;
+    transform: translateX(50px);
+    opacity: 0;
+    animation: show 1s ease 1.5s 1 forwards;
+
+
+
+}
+@keyframes show{
+    to{
+        transform:translate(0);
+        opacity: 1;
+    }
+        
+    
+}
+.open-menu #m{
+    position: absolute;
+    transition: .3s ease;
+}
+.open-menu .open.active{
+  transform: rotate(360deg);
+    opacity: 0;
+}
+.open-menu .open{
+    transform: scale(2);
+
+}
+.open-menu .close{
+    transform: rotate(180deg);
+    opacity: 0;
+
+    
+}
+.open-menu .close.active{
+    transform: rotate(0);
+    opacity: 1;
+    
+}
+.menu{
+    position: fixed;
+    top: 3%;
+    right: calc(3% + 60px +3%); 
+    overflow: hidden;
+    z-index: 12;
+    pointer-events: none;
+    user-select: none;
+    transition: 0.3s ease;
+    
+    opacity: 0;
+
+
+}
+.menu.active{
+    opacity: 1;
+    pointer-events: all;
+
+}
+.menu ul{
+    position: relative;
+    display: flex;
+    list-style: none;
+    background-color: rgb(255,255, 255,0.623);
+    backdrop-filter: blur(50px);
+    height: 50px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+
+padding: 25px;
+
+}
+
+.menu ul a{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+margin: 0 12px;
+padding: 6px 0;
+text-transform: capitalize;
+cursor: pointer;
+color: rgb(2,24, 24);
+transform: translateX(100%);
+opacity: 0;
+transition: 1s ease, color .2s ease-out;
+
+}
+.menu ul a::after{
+    position: absolute;
+    content: "";
+    aspect-ratio: 1/1;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(21, 131, 133);
+    top: 0;
+    transform: translateY(-400%);
+    transition: 0.2s ease-out;
+
+
+}
+.menu ul a.active{
+    color: rgb(4, 82,955);
+}
+.menu.active ul a{
+transform: translateX(0);
+opacity: 1;
+}
+.menu ul a .active::after{
+    transform: translateY(0);
+
+}
+/* .section{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+} */

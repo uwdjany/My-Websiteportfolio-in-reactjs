@@ -1,38 +1,69 @@
 import React from 'react';
-import './navbar.css';
+  import './navbar.css';
+import { MenuFoldOutlined } from "@ant-design/icons";
+import {CloseOutlined } from "@ant-design/icons";
+import Home from '../view/Home';
 
-function Nav (){
+const Nav = () => {
     return (
-        <div className='nav'>
-            <div className='nav-container'>
-
-            <ul className='nav-links'>
-
-<a href='' className='nav-link'>
-   <li>Home</li> 
-    </a>
-    
-    <a href='' className='nav-link'>
-   <li>About Me</li> 
-    </a>
-    
-    <a href='' className='nav-link'>
-   <li>Contact Me</li> 
-    </a>
-    
-    <a href='' className='nav-link'>
-   <li>Skills</li> 
-    </a>
-    
-    
-    
+        <>
+        
+        <div className='open-menu'>
+        <MenuFoldOutlined  id='m'className='open'/>
+        <CloseOutlined id='m' className='close'/>
+        
+        </div> 
+        <div className='menu'>
+<ul>
+    <a href='' className='active'>Home</a>
+    <a href='' >About Me</a>
+    <a href='' >Contact Me</a>
+    <a href='' >My Skills</a>
 </ul>
 
+        </div>
+        
+      <Home/>
+        
+        
+        
+//         </>
+//         <div className='nav'>
+//             <div className='nav-container'>
 
-            </div>
+//             <ul className='nav-links'>
+
+// <a href='' className='nav-link'>
+//    <li>Home</li> 
+//     </a>
+    
+//     <a href='' className='nav-link'>
+//    <li>About Me</li> 
+//     </a>
+    
+//     <a href='' className='nav-link'>
+//    <li>Contact Me</li> 
+//     </a>
+    
+//     <a href='' className='nav-link'>
+//    <li>Skills</li> 
+//     </a>
+    
+    
+    
+// </ul>
+
+
+//             </div>
 
             
-        </div>
+//         </div>
+
+
+
+
+
+
     )
 }
 
