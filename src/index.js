@@ -21,41 +21,41 @@ const close_icon = document.querySelector('open-menu .close');
  
  
  );
- const links = document.querySelectorAll('.menu ul a');
- links.forEach((link) => {
+//  const links = document.querySelectorAll('.menu ul a');
+//  links.forEach((link) => {
 
  
- link.addEventListener('click', () => {
+//  link.addEventListener('click', () => {
 
  
 
    
-   clearActives();
-   link.classList.add('active');
-   setTimeout(()=>{
-      menu.classList.remove('active');
-      open_icon.classList.remove('active');
-      close_icon.classList.remove('active')
-   },500)
-});
-});
-function clearActives(){
+//    clearActives();
+//    link.classList.add('active');
+//    setTimeout(()=>{
+//       menu.classList.remove('active');
+//       open_icon.classList.remove('active');
+//       close_icon.classList.remove('active')
+//    },500)
+// });
+// });
+// function clearActives(){
    
-   }
+//    }
 
-   const section_1 =document.querySelector('.container');
-   const windowHeight =window.innerHeight;
-   const animationPoint = 500;
+//    const section_1 =document.querySelector('.container');
+//    const windowHeight =window.innerHeight;
+//    const animationPoint = 500;
 
-   function scrollAnimation() {
-      const sect1_top =section_1.getBoundingClientRect().top;
-      if (sect1_top < windowHeight - animationPoint){
-         section_1.classList.add('active');
-         clearActives();
-         links[0].classList.add('active');
+//    function scrollAnimation() {
+//       const sect1_top =section_1.getBoundingClientRect().top;
+//       if (sect1_top < windowHeight - animationPoint){
+//          section_1.classList.add('active');
+//          clearActives();
+//          links[0].classList.add('active');
 
-      }
+//       }
 
-   }
-   scrollAnimation();
-   window.addEventListener('scroll',scrollAnimation);
+//    }
+//    scrollAnimation();
+//    window.addEventListener('scroll',scrollAnimation);

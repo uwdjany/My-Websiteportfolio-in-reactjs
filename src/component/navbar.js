@@ -16,14 +16,13 @@ const Nav = () => {
         <div className='menu'>
 <ul>
     <a href='' className='active'>Home</a>
-    <a href='' >About Me</a>
+    <a href='about' >About Me</a>
     <a href='' >Contact Me</a>
     <a href='' >My Skills</a>
 </ul>
 
         </div>
         
-      <Home/>
         
         
         

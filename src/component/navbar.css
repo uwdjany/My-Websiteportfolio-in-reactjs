@@ -37,7 +37,7 @@ html{
 
 
 } */
-body{
+/* body{
      display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +48,7 @@ body{
  overflow: hidden;
     min-height: 100vh;
 
-}
+} */
 ::-webkit-scrollbar{
     width: 0;
 }
@@ -68,6 +68,7 @@ body{
     transform: translateX(50px);
     opacity: 0;
     animation: show 1s ease 1.5s 1 forwards;
+float: right;
 
 
 
@@ -186,3 +187,13 @@ opacity: 1;
     align-items: center;
     scroll-snap-align: start;
 } */
+.image{
+    width: 30%;
+  height: 100vh;
+  position: center;
+  margin-top: 8rem;
+  margin-left: 13rem;
+}
+.container-image{
+
+}

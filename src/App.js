@@ -1,14 +1,13 @@
 
 import React from "react";
-// import {BrowserRouter as Router} from "react-router-dom";
-// import Routes from './routes';
-import Nav from "./component/navbar";
+import {BrowserRouter as Router} from "react-router-dom";
+import Routes from './routes';
+
 function App() {
   return (
-    <>
-    
-    <Nav></Nav> 
-    </>
+    <Router>
+  <Routes></Routes>
+  </Router>
   );
 }
 

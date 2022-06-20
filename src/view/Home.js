@@ -1,29 +1,37 @@
 import React from "react";
  import Nav from "../component/navbar";
 import './home.css';
-import ground from '../assets/image/image.jpg'
- 
-function Home(){
+import ground from '../assets/image/uwase-background.jpg'
+import {Card,Text,Typography} from 'antd'
+
+
+
+const Home =()=> {
 return(
     <>
 
-
+<Nav/>
  
      <div className="container" id="home">
-      <h3>Home</h3>
-      <div className="bg-wp">
-         <img src={ground}/>
+   
+      <div className="container-image">
+         <img src={ground} className='image'/>
       </div> 
-      <div className="text-container">
-         <h1>Hello</h1 >
-         <h2>Am Djanati Uwase</h2>
-         <span>I'm UI/UX Designer,FullStack Developer
-            loremnxhhhhdbhxeeeeee
-            eeeeeeeeeeeeeeeeeeeeeeeewx b
-            </span>
-            <a href="" className="about-btn">Hire Me</a>
+     < Card className="card">
+            <Card.Grid>
+<h4 className="heading-four">
+Traduit de l'anglais<br />
+Un CV, parfois orthographié, <br />
+appelé CV en anglais hors de l<br />
+'Amérique du Nord, est<br />
+ un document créé et utilisé par une <br />
+personne pour présenter ses antécédents<br />
+, ses compétences 
+et ses réalisations. </h4>  
+ </Card.Grid></Card>
+
       </div>
-      </div>
+   
 
 
    
